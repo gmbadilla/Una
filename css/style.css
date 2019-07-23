@@ -1,0 +1,878 @@
+/*
+	--	INFO. GENERAL	--
+	
+	Nombre del proyecto: 	UNA web site responsive
+
+	Integrates: 
+							María Salgado
+							Kristel Hernández
+							Jacqueline Cordero
+							German Herrera
+							Glenda Badilla
+
+	Ultima actualización: 	23 de julio
+
+*/
+
+/*
+	--	COLORES	--
+
+	Rojo - #b12e33
+	Azul - #1b5495
+	Negro - #232020
+	Gris - #c8c9ca
+
+*/
+
+/*
+	--	FUENTES	--
+*/
+
+@font-face {
+	font-family: 'Frutiger LT Std';
+	src:url(../fonts/Frutiger_LT_Std_57_Cn_Bold.otf) format("opentype");
+	font-weight: 300;
+}
+
+/*
+	--	SETTINGS --
+*/
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	word-wrap: break-word;
+	
+	font-family: 'Frutiger LT Std';
+}
+
+body { overflow-x: hidden; }
+html { scroll-behavior: smooth; }
+a	 { text-decoration: none; }
+[type=checkbox],[type=radio] { display: none; }
+
+.contenedor { 
+	min-width: 370px; 
+	min-height: 500px;
+	height: auto;
+}
+
+/*GLENDA*/
+
+/*
+	--	HEADER --
+*/
+header {
+	position: relative;
+	top: 0;
+	width: 100vw;
+	min-height: 110px;
+	background: #bb2829;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 999999999;
+}
+
+/*
+	--	LOGO --
+*/
+.logo{
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 3%;
+	z-index:51;
+	display: flex;
+	
+	justify-content: center;
+	align-items: center;
+}
+
+.logo .img_logo{
+	width: auto;
+	height: 130px;
+}
+
+
+
+/*
+	--	MENU HAMBURGUESA --
+*/
+.menu_una{
+	position: absolute;
+	top: 35%;
+	left: 8%;
+	z-index: 9999999;
+	cursor: pointer;
+	height: 50px;
+	width: 50px;
+	display: flex;
+	justify-content: center;
+}
+.menu_una span{
+	position: relative;
+	background: #fff;
+	display: inline-block;
+	width: 30px;
+	height: 4px;
+	transition: .2s;
+	border-radius: 1px;
+	z-index: 9999999;
+}
+.menu_una span::before {
+	content: '';
+	width: 30px;
+	height: 4px;
+	background: #fff;
+	display: inline-block;
+	position: absolute;
+	top: -10px;
+	transition:.5s;
+	border-radius: 1px;
+
+	z-index: 9999999;
+}
+.menu_una span::after {
+	content: '';
+	width: 30px;
+	height: 4px;
+	background: #fff;
+	display: inline-block;
+	position: absolute;
+	top: 10px;
+	left: 0;
+	transition:.5s;
+	border-radius: 1px;
+	z-index: 9999999;
+}
+.menu_una p{
+	color: #fff;
+	font-size: 1em;
+	position: absolute;
+	bottom: 0;
+	z-index: 61;
+	margin-bottom: 0;
+}
+
+.menu_info{
+	width: 55vw;
+	height: 400px;
+	background: #221f20;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 60;
+	display: none;
+	transition: .10s;
+	
+}
+
+.main_menu{
+	margin-top: 100px;
+	list-style: none;
+	width: 100%;
+	height: 400px;
+	background: #221f20;
+	overflow: scroll;
+	z-index: 60;
+	
+}
+.main_menu a{
+	color: #fff;
+	cursor: pointer;
+	padding-left: 10px;
+	text-decoration: none !important;
+	width: 100%;
+	height: 50px;
+	z-index: 60;
+	display: flex;
+	align-items: center;
+}
+.main_menu a:hover{
+	transition: .5s;
+	background: #b12e33;
+	color: #fff;
+}
+
+.opciones_menu{
+	width: 100%;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	border-bottom: 2px solid grey;
+}
+
+/*
+	--	CHECKBOX --
+*/
+
+
+#mhu:checked ~ .menu_una{
+	position: fixed;
+	top: 5.5%;
+}
+
+
+
+#mhu:checked ~ .menu_info{
+	display: block;
+
+}
+
+#mhu:checked ~ .menu_una span { 
+	background: #232020; 
+}
+#mhu:checked ~ .menu_una span::before {
+	top: 0; 
+	transform: rotate(-135deg);
+	 background: #fff; 
+	}
+#mhu:checked ~ .menu_una span::after { 
+	top: 0; 
+	transform: 
+	rotate(135deg); 
+	background: #fff; 
+}
+
+
+
+
+
+								/*PARTE KRISTEL*/
+
+/*
+	--	SEGUNDA SECCIÓN --
+*/
+
+	/*Contenedor*/
+.segundo_menu{ 			
+	width: 100vw;
+	height: auto;
+	position: relative;
+}
+	/*IMAGENES DE SECCIÓN*/
+.first_img{
+	width: 100%;
+	height: auto;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.imagenes_de_seccion{
+	width: 100%;
+	height: auto;
+}
+
+.dos_img{
+	width: 100%;
+	height: auto;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+.tres_img{
+	width: 100%;
+	height: auto;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+	/*BOTONES SEGUNDA SEC*/
+
+.boton_primaryS{
+	width: 280px;
+  	height: 75px;
+  	position: absolute;
+ 	top: 65%;
+ 	outline: none;
+ 	background: rgba(1, 1, 1 , 0.1);
+ 	color: #fff;
+ 	font-size: 1.8em;
+ 	border: 5px #fff solid;
+ 	overflow: hidden;
+ 	padding-left: 15px;
+ 	display: flex;
+ 	align-items: center;
+
+}
+
+.boton_primaryS2{
+	width: 330px;
+  	height: 75px;
+  	position: absolute;
+ 	top: 65%;
+ 	outline: none;
+ 	background: rgba(1, 1, 1 , 0.1);
+ 	color: #fff;
+ 	font-size: 1.8em;
+ 	border: 5px #fff solid;
+ 	overflow: hidden;
+ 	padding-left: 15px;
+ 	display: flex;
+ 	align-items: center;
+}
+.boton_primaryS2 p{
+	position: absolute;
+}
+
+.boton_primaryS p{
+	position: absolute;
+}
+.boton_primaryS a{
+	width: 300px;
+  	height: 75px;
+	z-index: 1000;
+}
+.boton_primaryS2 a{
+	width: 300px;
+  	height: 75px;
+	z-index: 1000;
+}
+.flechas{
+ 	width: 50px;
+ 	height: auto;
+ 	position: absolute;
+ 	top: 25%;
+ 	right: 25px;
+}
+
+.buttom2{
+ 	position: absolute;
+ 	top: 65%;	
+}
+.btn2{
+  	width: 330px;
+  	height: 75px;
+ 	background: rgba(0, 0, 0 , 0.4);
+ 	color: #fff;
+ 	font-size: 1.8em;
+ 	border: 5px #fff solid;
+ 	padding-left: 15px;
+ 	display: flex;
+ 	overflow: hidden;
+  	outline: none;
+    position: relative;
+    padding-top: 1%;
+}
+.flechas2{
+ 	width: 50px;
+ 	height: auto;
+ 	position: absolute;
+ 	top: 25%;
+ 	right: 25px;
+}
+
+								/*parte de jacky*/
+	/*Contenedor*/
+.contenido_central{
+	width: 100vw;
+	height: auto;
+	margin-top: 15%;	
+}
+	/*Titulos*/
+.titulos_centrales{
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.titulos_centrales h2{
+	font-size: 2em;
+	color: #b12e33;
+}
+
+	/*Cuadros*/
+.opciones_tramite{
+	width: 100%;
+	height: 60vh;
+	display: flex;
+	justify-content: space-around;
+	flex-flow:row wrap;
+	padding-top: 5%; 
+	padding-left: 3%;
+	padding-right: 3%; 
+	
+}
+.cuadros_tramites{
+	width: 45%;
+	height: 150px;
+	position: relative;
+	background: #bb2829;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px 0 0 0;
+}
+.img_trian_op{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	bottom: 0;
+}
+.cuadros_tramites p{
+	font-size: 1.2em;
+	color: #fff;
+	text-align: center;
+	padding: 5%;
+
+}
+
+
+
+/*slides*/
+
+.seccion_noticias{
+	width: 100vw;
+	height: auto;
+	margin-top: 15%;
+}
+
+.seccionEventos{
+	width: 100vw;
+	height: auto;
+	margin-top: 15%;
+	
+}
+
+.contenedorEventos{
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin-top: 5%; 
+	
+}
+
+
+.carousel-indicators{
+	position: absolute;
+	bottom: -50px !important;
+}
+
+.carousel-indicators li {
+	width: 20px !important;
+	height: 20px !important;
+	border-top: 0 !important;
+	border-bottom: 0 !important;
+	border-radius: 50%;
+	border: 1px solid #c8c9ca !important;
+	
+}
+.carousel-indicators .active{
+	background-color: #c8c9ca !important;
+}
+
+.carousel-control-next, .carousel-control-prev{
+	background-color: #232020;
+	padding: 0px;
+	margin: 0px;
+	height: 80px;
+	top: 40% !important;
+	position: absolute;
+}
+
+.carousel-caption{
+	bottom: -10px !important;
+	height: 25% !important;
+	width: 100% !important;
+	padding: 0 !important;
+	
+	margin: 0 !important;
+	left: 0 !important;
+	background-color: rgba(187,40,41,0.8);
+}
+.carousel-caption p{
+	padding-right:  2%;
+	padding-left: 2%;
+	padding-top: 1%;
+}
+
+
+/*
+codigo german*/
+
+#sectionWrapper{
+	margin-top: 15%;
+	height: auto;
+	width: 100vw;
+	background: url(../resources/background00.jpg) no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	outline: none;
+	flex-flow:row wrap;
+}
+
+
+.searchSection{
+	width: 90%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.titulo_busqueda{
+	width: 100%;
+	height: auto;
+	margin-top: 10%;
+}
+.titulo_busqueda h2{
+	font-size: 1.8em;
+	color: #b12e33;
+	text-align: center;
+
+}
+
+.searchSection input[type=text] {
+  padding: 10px;
+  font-size: 1.2em;
+  border: 2px solid black;
+  border-radius: 5px 0 0 5px;
+  width: 100%;
+  background: rgba(0,0,0,0);
+  border-right: none;
+  outline: none;
+}
+
+::-webkit-input-placeholder{ 
+    color: #232020;
+}
+
+
+.searchSection button {
+  width: 15%;
+  padding: 10px;
+ background: rgba(0,0,0,0);
+  color: black;
+   font-size: 1.2em;
+border: 2px solid black;
+border-radius: 0 5px 5px 0;
+  border-left: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.searchSection button:hover {
+  background: #b12e33;
+}
+
+.searchSection::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+.radiosButtos{
+
+	height: 100px;
+	width: 70%;
+	margin: 10% auto;
+	
+	box-sizing: border-box;
+	outline: none;
+	
+}
+
+
+
+.liButton{
+  display: block;
+  
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 5%;
+  cursor: pointer;
+  font-size: 1.3em;
+
+}
+
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+
+
+/* When the radio button is checked, add a blue background */
+.liButton input:checked ~ .checkmark {
+  background-color: #232020;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.liButton input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.liButton .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+
+
+.botonSection{
+	width: 100vw;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10%;
+	outline: 1px solid red;
+}
+
+.botonSection a{
+	width: 50%;
+}
+
+.botonSectionA{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	outline: 1px solid red;
+}
+
+
+
+
+.botonSectionA img{
+	width: 60%;
+	height: auto;
+}
+
+.botonSectionA p{
+	font-size: 1.5em;
+	color: #b12e33;
+	padding-top: 5%;
+
+}
+
+
+.mapa{
+	
+	width: 100%;
+	height: 200px;
+	background: url(../resources/map.png) no-repeat;
+	background-size: cover;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+.mapa .cuadro_map{
+	width: 85%;
+	height: 150px;
+	background: rgba(189,47,39,0.9);
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	
+
+}
+
+.cuadro_map h3{
+	font-size: 2em;
+	color: #fff;
+	padding: 16px;
+	text-align: center;
+
+}
+
+
+
+footer{
+	height: auto;
+	width: 100%;
+	background: #0d1117;
+}
+
+
+.triangulos{
+	height: auto;
+	width: 100%;
+	z-index: 100000;
+	
+}
+.triangulos img{
+	width: 100%;
+	height: 25%;
+}
+
+footer h2{ /*contactenos*/
+	width: 100%;
+	height: auto;
+	font-size: 1.1em;
+	color: white;
+	text-align: center;
+	font-family: Frutiger LT Std;
+	font-weight: 700;
+	
+	margin-top: 3%;
+}
+
+footer h3{/*info Universidad*/
+	width: 100%;
+	height: auto;
+	font-size: .9em;
+	color: white;
+	text-align: center;
+	font-family: Frutiger LT Std;
+	font-weight: 100;
+	margin-top: 3%;
+}
+.contac{
+	width: 100%;
+	height: auto;
+	margin-top: 2%;
+	
+}
+
+.redes{
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	margin-top: 6%;
+	padding-right: 10%;
+	padding-left: 10%;
+}
+
+
+
+.face{
+	height: 65px;
+	width: 65px;
+	
+	background: url('../botones/face.svg')no-repeat;
+	background-size: contain;
+	transition: .5s;
+	z-index: 1;
+}
+.face:hover{
+	transform: scale(1.1);
+	}
+.twi{
+	height: 65px;
+	width: 65px;
+	background: url('../botones/twi.svg')no-repeat;
+	background-size: contain;
+	transition: .5s;
+	z-index: 1;
+}
+.twi:hover{
+	transform: scale(1.1);
+	}
+.insta{
+	height: 65px;
+	width: 65px;
+	background: url('../botones/insta.svg')no-repeat;
+	background-size: contain;
+	transition: .5s;
+	z-index: 1;
+
+}
+.insta:hover{
+	transform: scale(1.1);
+	}
+.sound{
+	height: 65px;
+	width: 65px;
+	background: url('../botones/sound.svg')no-repeat;
+	background-size: contain;
+	transition: .5s;
+}
+.sound:hover{
+	transform: scale(1.1);
+	}
+.youtube{
+	height: 65px;
+	width: 65px;
+	background: url('../botones/youtube.svg')no-repeat;
+	background-size: contain;
+	transition: .5s;
+}
+.youtube:hover{
+	transform: scale(1.1);
+	}
+
+.a{
+	height: 65px;
+	width: 65px;
+	background: url('../botones/a.svg')no-repeat;
+	background-size: contain;
+	transition: .5s;
+}
+.a:hover{
+	transform: scale(1.1);
+	}
+
+.ranked{
+	margin-top: 5%;
+	height: 139px;
+	width: 100%;
+	background: url('../botones/ranked.svg')no-repeat center;
+	background-size: contain;
+	display: flex;
+	z-index: 1;
+	justify-content: center;
+}
+.copyright{
+	margin-top: 7%;
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.copyright p{
+	font-size: 0.6em;
+	text-align: center;
+	color: #666666;
+	font-family: Frutiger LT Std;
+	font-weight: 100;
+	padding-right: 3%;
+	padding-left: 3%;
+}
